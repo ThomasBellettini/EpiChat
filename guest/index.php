@@ -53,6 +53,7 @@ if (isset($_POST['name'])) {
     } else {
         $_SESSION['name'] = $_POST['name'];
         $_SESSION['rank'] = 2;
+        $_SESSION['guest'] = true;
         header('Location: https://jam.shurisko.fr/chat');
         return;
     }

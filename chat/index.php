@@ -20,6 +20,8 @@ if ($pdo) {
     }
     if (!isset($_SESSION['rank']))
         $_SESSION = $rank;
+    if (isset($_SESSION['guest']) == true)
+        $_SESSION['rank'] = 2;
     echo "<script> console.log(".$_SESSION['rank'] .")</script>";
     $requests->closeCursor();
 }
