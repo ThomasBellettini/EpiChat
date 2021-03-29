@@ -59,6 +59,11 @@ if ($pdo) {
                 <textarea id="usermsg" class="form-control" aria-describedby="usernameHelp" maxlength="100" <?php echo 'placeholder="'; echo $_SESSION['name']; echo ' Type Here"'?> rows="1"></textarea>
                 <button name="submitMsg" type="button" id="clicksend" onclick="writeLog()" class="btn btn-success" style="margin: 5px auto;width: 1155px;"><b>Send</b></button>
                 <button name="logout" type="button" id="logout" onclick="logout_client()" class="btn btn-danger" style="margin: 5px auto;width: 1155px;"><b>Logout</b></button>
+                <?php
+                    if ($_SESSION['rank'] == 1) {
+                        echo '<button name="logout" type="button" id="logout" onclick="clear_chat()" class="btn btn-danger" style="margin: 5px auto;width: 1155px;"><b>Clear Chat</b></button>';
+                    }
+                ?>
         </div>
         </div>
     </div>
@@ -95,6 +100,13 @@ if ($pdo) {
             cache: false
         });
         document.location.reload();
+    }
+
+    function clear_chat() {
+        $.ajax({
+            url: "clear.php",
+            cache: false
+        });
     }
 
     function writeLog() {
