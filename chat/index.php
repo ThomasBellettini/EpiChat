@@ -138,11 +138,18 @@ if ($pdo) {
     }
 
     function loadLog(){
+        var oldscrollHeight = $("#chatbox").attr("scrollHeight") - 20;
         $.ajax({
-            url: "./log.html",
+            url: "log.html",
             cache: false,
             success: function(html){
                 $("#chatbox").html(html);
+
+                //Auto-scroll
+                var newscrollHeight = $("#chatbox").attr("scrollHeight") - 20;
+                if(newscrollHeight > oldscrollHeight){
+                    $("#chatbox").animate({ scrollTop: newscrollHeight }, 'normal');
+                }
             },
         });
     }
