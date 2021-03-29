@@ -74,7 +74,11 @@ if ($pdo) {
 
     document.getElementById("usermsg").addEventListener("keyup", function (event) {
         if (event.keyCode == 13) {
-            writeLog();
+            if (document.getElementById("usermsg").value.length <= 0 || document.getElementById("usermsg").value.length >= 100) {
+                document.getElementById("usermsg").value=null;
+            } else {
+                writeLog();
+            }
         }
     })
 
