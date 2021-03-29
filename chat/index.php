@@ -88,7 +88,11 @@ if ($pdo) {
     });
 
     function logout_client() {
-
+        $.ajax({
+            url: "https://jam.shurisko.fr/chat/disconnect.php",
+            cache: false
+        });
+        document.location.reload();
     }
 
     function writeLog() {
