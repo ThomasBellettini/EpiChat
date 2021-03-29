@@ -59,7 +59,7 @@ if (isset($_POST['name'])) {
 }
 
 if (!isset($_SESSION['name'])) {
-    echo '    <form action="./index.php" method="post">
+    echo '    <form action="index.php" method="post">
                   <div class="form-group alert alert-dark" role="alert" style="margin: 150px auto; width: 500px;">
                     <label for="name" style="text-align: center; margin: 0 auto"> </label>
                     <input type="text" id="name" name="name" class="form-control" id="name" aria-describedby="usernameHelp" placeholder="Username" style="text-align: center">
