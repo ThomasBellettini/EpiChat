@@ -14,7 +14,7 @@ if ($pdo) {
     $requests = $pdo->prepare("SELECT * FROM jam_account WHERE username='" . $_SESSION['name'] . "'");
     $requests->execute(array($_SESSION['name']));
 
-    $rank = 0;
+    $rank = 2;
     while ($donner = $requests->fetch()) {
         $_SESSION['rank'] = $donner['Rank'];
     }
