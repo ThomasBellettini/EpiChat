@@ -90,7 +90,7 @@ if (!isset($_SESSION['name'])) {
     echo $list_quote[$random_quote];
     echo '</small>
                   <button type="submit" class="btn btn-success" style="width: 460px; margin: 0 auto">Connexion</button>
-                  <a href="https://jam.shurisko.fr/register"><button type="submit" class="btn btn-success" style="width: 460px; margin: 10px auto">Créer un compte</button></a>
+                  <a href="https://jam.shurisko.fr/register"><button type="button" class="btn btn-success" style="width: 460px; margin: 10px auto">Créer un compte</button></a>
                   </div>
               </form>';
     return;
