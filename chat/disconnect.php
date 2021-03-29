@@ -1,6 +1,7 @@
 <?php
+session_start();
+    $_SESSION['name'] = null;
+    $_SESSION['rank'] = null;
 
-    session_destroy();
     header('Location: https://jam.shurisko.fr/');
-
 ?>
