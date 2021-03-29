@@ -11,6 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="ressource/EpiChat.png">
     <meta name="theme-color" content="#0EF1F1">
+    <link rel="icon" href="../chat/ressource/favicon.ico" />
 
     <meta name="twitter:site" content="@Epi_Chat" />
 </head>

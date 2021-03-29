@@ -9,8 +9,9 @@
     <meta property="og:description" content="A Chat For meetup all people around the world!" />
     <meta property="og:color" content="A Chat For meetup all people around the world!" />
     <meta property="og:type" content="website">
-    <meta property="og:image" content="chat/ressource/EpiChat.png">
+    <meta property="og:image" content="chat/ressource/favicon.ico">
     <meta name="theme-color" content="#0EF1F1">
+    <link rel="icon" href="char/ressource/favicon.ico" />
 
     <meta name="twitter:site" content="@Epi_Chat" />
 </head>
