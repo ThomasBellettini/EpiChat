@@ -8,7 +8,12 @@ if(isset($_SESSION['name'])) {
     setlocale(LC_TIME, 'fra_fra');
 
     $fp = fopen("./log.html", 'a');
-    fwrite($fp, "<div class='msgln'>(".strftime('%H:%M:%S').") <b>".$_SESSION['name']."</b>: ".stripslashes(htmlspecialchars($text))."<br></div>");
+
+    if ($_SESSION['rank'] == 1) {
+        fwrite($fp, "<div class='msgln'>(".strftime('%H:%M:%S').") <span class=\"badge rounded-pill bg-danger\">Administrateur</span> <b>".$_SESSION['name']." </b>: ".stripslashes(htmlspecialchars($text))."<br></div>");
+    } else {
+        fwrite($fp, "<div class='msgln'>(".strftime('%H:%M:%S').") <span class=\"badge rounded-pill bg-secondary\">Membre</span> <b>".$_SESSION['name']." </b>: ".stripslashes(htmlspecialchars($text))."<br></div>");
+    }
     fclose($fp);
 }
 ?>
