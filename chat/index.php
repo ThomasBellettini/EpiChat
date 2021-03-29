@@ -92,6 +92,7 @@ if ($pdo) {
             session_abort();
             header('Location: https://jam.shurisko.fr/');
         ?>
+        console.log("Disconnect");
     }
 
     function writeLog() {
