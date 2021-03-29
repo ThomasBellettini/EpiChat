@@ -56,7 +56,7 @@ if ($pdo) {
             <in class="form-group col-md-12">
                 <textarea id="usermsg" class="form-control" aria-describedby="usernameHelp" maxlength="100" <?php echo 'placeholder="'; echo $_SESSION['name']; echo ' Type Here"'?> rows="1"></textarea>
                 <button name="submitMsg" type="button" id="clicksend" onclick="writeLog()" class="btn btn-success" style="margin: 5px auto;width: 1155px;"><b>Send</b></button>
-                <button name="logout" type="button" id="logout" onclick="logout()" class="btn btn-danger" style="margin: 5px auto;width: 1155px;"><b>Logout</b></button>
+                <button name="logout" type="button" id="logout" onclick="logout_client()" class="btn btn-danger" style="margin: 5px auto;width: 1155px;"><b>Logout</b></button>
         </div>
         </div>
     </div>
@@ -87,7 +87,7 @@ if ($pdo) {
         setInterval (loadLog, 1000);
     });
 
-    function logout() {
+    function logout_client() {
         <?php
             session_abort();
             header('Location: https://jam.shurisko.fr/');
