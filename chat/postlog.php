@@ -12,9 +12,9 @@ if(isset($_SESSION['name'])) {
     if ($_SESSION['rank'] == 1) {
         fwrite($fp, "<div class='msgln'>(" . strftime('%H:%M:%S') . ") <span class=\"badge rounded-pill bg-danger\">Administrateur</span> <b>" . $_SESSION['name'] . " </b>: " . stripslashes(htmlspecialchars($text)) . "<br></div>");
     } else if ($_SESSION['rank'] == 2) {
-        fwrite($fp, "<div class='msgln'>(" . strftime('%H:%M:%S') . ") <span class=\"badge rounded-pill bg-danger\">Administrateur</span> <b>" . $_SESSION['name'] . " </b>: " . stripslashes(htmlspecialchars($text)) . "<br></div>");
+        fwrite($fp, "<div class='msgln'>(" . strftime('%H:%M:%S') . ") <span class=\"badge rounded-pill bg-warning\">Guest</span> <b>" . $_SESSION['name'] . " </b>: " . stripslashes(htmlspecialchars($text)) . "<br></div>");
     } else {
-        fwrite($fp, "<div class='msgln'>(".strftime('%H:%M:%S').") <span class=\"badge rounded-pill bg-warning text-dark\">Guest</span> <b>".$_SESSION['name']." </b>: ".stripslashes(htmlspecialchars($text))."<br></div>");
+        fwrite($fp, "<div class='msgln'>(".strftime('%H:%M:%S').") <span class=\"badge rounded-pill bg-secondary text-dark\">Membre</span> <b>".$_SESSION['name']." </b>: ".stripslashes(htmlspecialchars($text))."<br></div>");
     }
     fclose($fp);
 }

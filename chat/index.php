@@ -88,11 +88,10 @@ if ($pdo) {
     });
 
     function logout_client() {
-        <?php
-            session_abort();
-            header('Location: https://jam.shurisko.fr/');
-        ?>
-        console.log("Disconnect");
+        $.ajax({
+            url: "https://jam.shurisko.fr/chat/disconnect.php",
+            cache: false
+        });
     }
 
     function writeLog() {
