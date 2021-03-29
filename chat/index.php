@@ -88,13 +88,7 @@ if ($pdo) {
     });
 
     function logout_client() {
-        <?php
 
-            $_SESSION['name'] = null;
-            $_SESSION['rank'] = null;
-            header('Location: https://jam.shurisko.fr/');
-
-        ?>
     }
 
     function writeLog() {
